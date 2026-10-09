@@ -1,0 +1,70 @@
+<!-- Create an HTML form for registering youth soccer players with validation.
+
+Your form should include the following fields:
+
+First Name (required)
+Last Name (required)
+Age (required, must be between 8-16)
+Parent/Guardian Email (required, valid email format)
+Mobile Phone Number (required)
+T-Shirt Size (dropdown: XS, S, M, L, XL)
+Previous Soccer Experience (radio buttons: None, 1-2 Years, 3+ Years)
+
+Validation requirements
+
+All required fields must be completed
+Age must be between 8-16
+Email must be in valid format
+Mobile Phone Number must be in xxxx xxx xxxx format
+Display error messages for invalid fields
+-->
+
+
+<html>
+    <head>
+        <title> Soccer Registering</title>
+    </head>
+    <body>
+        <form>
+            What is you first name?<br/>
+            <input type="text" name="firstname" required><br/>
+
+            what is your last name?<br/>
+            <input type="Text" name="lastname" required><br/>
+
+            how old are you?<br/>
+            <input type="text" name="age" min="8" max="16" required><br/>
+
+            mobile phone number<br/>
+            <input type="text" name="phonenumber" pattern="[0-9]{4}[0-9]{3}[0-9]{4}" required><br/>
+
+            <label for="t1"
+          >What is you shirt size?<span aria-label="required"
+            >*</span
+          ></label
+        >
+        <input
+          type="text"
+          id="t1"
+          name="size"
+          list="l1"
+          required
+        />
+        <datalist id="l1">
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </datalist>
+        <br/><br>
+
+            previous soccer experience<br/>
+            <input type="radio" name="years" value="None" checked> None
+            <input type="radio" name="years" value="1-2"> 1-2
+            <input type="radio" name="years" value="3+"> 3+
+            <br><br>
+            
+        </form>
+    </body>
+</html>
